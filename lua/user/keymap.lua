@@ -26,6 +26,9 @@ map("n", "<leader>q", ":q<CR>", opts)
 map("n", "0", "^", opts)
 map("n", "^", "0", opts)
 
+-- NERDTree
+map("n", "<leader>e", ":NERDTreeToggle<CR>", opts)
+
 -- Insert
 map("i", "jj", "<Esc>", opts)
 
@@ -36,8 +39,8 @@ map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
 
 -- Move text up and down
-map("v", "<A-j>", ":m .+1<CR>==", opts)
-map("v", "<A-k>", ":m .-2<CR>==", opts)
+map("v", "J", ":m .+1<CR>==", opts)
+map("v", "K", ":m .-2<CR>==", opts)
 
 map("v", "p", '"_dp', opts)
 
@@ -46,8 +49,4 @@ map("v", "p", '"_dp', opts)
 -- Move text up and down
 map("x", "J", ":move '>+1<CR>gv-gv", opts)
 map("x", "K", ":move '<-2<CR>gv-gv", opts)
-map("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-map("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
-
-
 

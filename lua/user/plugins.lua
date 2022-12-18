@@ -48,19 +48,57 @@ return packer.startup(function(use)
 
     -- Enhancements
     use "justinmk/vim-sneak"
+    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+    use "windwp/nvim-autopairs"
+    use "numToStr/Comment.nvim"
+    use "RRethy/vim-illuminate"
+    use "nvim-tree/nvim-web-devicons"
+    use "airblade/vim-rooter"
+    use "ethanholz/nvim-lastplace"
+    use "ThePrimeagen/harpoon"
+
+    -- Zen-Mode
+    use "folke/zen-mode.nvim"
+    -- use "folke/twilight.nvim"
+
+    -- NERDTree
+    use "preservim/nerdtree"
+    use "Xuyuanp/nerdtree-git-plugin"
+
+    -- Telescope
+    use {
+      'nvim-telescope/telescope.nvim',
+      requires = { {'nvim-lua/plenary.nvim'} }
+    }
+
+    -- LSP
+    use {
+        'VonHeikemen/lsp-zero.nvim',
+        requires = {
+            -- LSP Support
+            {'neovim/nvim-lspconfig'},
+            {'williamboman/mason.nvim'},
+            {'williamboman/mason-lspconfig.nvim'},
+
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},
+            {'hrsh7th/cmp-buffer'},
+            {'hrsh7th/cmp-path'},
+            {'saadparwaiz1/cmp_luasnip'},
+            {'hrsh7th/cmp-nvim-lsp'},
+            {'hrsh7th/cmp-nvim-lua'},
+
+            -- Snippets
+            {'L3MON4D3/LuaSnip'},
+            {'rafamadriz/friendly-snippets'},
+        }
+    }
 
     -- cmp plugins
-    use "hrsh7th/nvim-cmp" -- The completion plugin
-    use "hrsh7th/cmp-buffer" -- buffer completions
-    use "hrsh7th/cmp-path" -- path completions
     use "hrsh7th/cmp-cmdline" -- cmdline completions
-    use "saadparwaiz1/cmp_luasnip" -- snippet completions
 
-    -- snippets
-    use "L3MON4D3/LuaSnip" --snippet engine
-    use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
-    if packer_boostrap then
+    if packer_bootstrap then
         packer.sync()
     end
 end)
