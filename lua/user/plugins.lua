@@ -56,14 +56,19 @@ return packer.startup(function(use)
     use "airblade/vim-rooter"
     use "ethanholz/nvim-lastplace"
     use "ThePrimeagen/harpoon"
+    use {
+        'AckslD/nvim-whichkey-setup.lua',
+        requires = {'liuchengxu/vim-which-key'},
+    }
+    use "akinsho/toggleterm.nvim"
+    use "nvim-lualine/lualine.nvim"
 
     -- Zen-Mode
     use "folke/zen-mode.nvim"
     -- use "folke/twilight.nvim"
 
-    -- NERDTree
-    use "preservim/nerdtree"
-    use "Xuyuanp/nerdtree-git-plugin"
+    -- TreePlugin
+    use "nvim-tree/nvim-tree.lua"
 
     -- Telescope
     use {
@@ -93,6 +98,8 @@ return packer.startup(function(use)
             {'rafamadriz/friendly-snippets'},
         }
     }
+    use "jose-elias-alvarez/null-ls.nvim"
+    use "folke/trouble.nvim"
 
     -- cmp plugins
     use "hrsh7th/cmp-cmdline" -- cmdline completions

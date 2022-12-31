@@ -26,9 +26,6 @@ map("n", "<leader>q", ":q<CR>", opts)
 map("n", "0", "^", opts)
 map("n", "^", "0", opts)
 
--- NERDTree
-map("n", "<leader>e", ":NERDTreeToggle<CR>", opts)
-
 -- Insert
 map("i", "jj", "<Esc>", opts)
 
