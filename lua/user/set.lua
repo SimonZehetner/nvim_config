@@ -33,3 +33,4 @@ set.showtabline = 2
 set.timeoutlen = 1000
 set.updatetime = 300
 
+vim.wo.signcolumn = "yes"
