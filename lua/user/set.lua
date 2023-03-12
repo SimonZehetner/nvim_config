@@ -27,10 +27,9 @@ set.undofile = true
 set.splitbelow = true
 set.splitright = true
 set.termguicolors = true
-set.clipboard = "unnamedplus"
 set.conceallevel = 0
 set.showtabline = 2
-set.timeoutlen = 1000
+set.timeoutlen = 500
 set.updatetime = 300
 
 vim.wo.signcolumn = "yes"

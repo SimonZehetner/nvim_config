@@ -45,7 +45,7 @@ return packer.startup(function(use)
 	use("arcticicestudio/nord-vim")
 
 	-- Enhancements
-	use("justinmk/vim-sneak")
+	use("ggandor/leap.nvim")
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use("windwp/nvim-autopairs")
 	use("numToStr/Comment.nvim")
@@ -60,6 +60,10 @@ return packer.startup(function(use)
 	})
 	use("akinsho/toggleterm.nvim")
 	use("nvim-lualine/lualine.nvim")
+	use("tpope/vim-speeddating")
+	use("tpope/vim-repeat")
+
+	use("rhysd/vim-grammarous")
 
 	-- Zen-Mode
 	use("folke/zen-mode.nvim")
@@ -98,6 +102,12 @@ return packer.startup(function(use)
 	})
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("folke/trouble.nvim")
+
+	-- Debug
+	use("mfussenegger/nvim-dap")
+	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+	use("theHamsta/nvim-dap-virtual-text")
+	use("mfussenegger/nvim-dap-python")
 
 	-- cmp plugins
 	use("hrsh7th/cmp-cmdline") -- cmdline completions

@@ -19,10 +19,6 @@ map("n", "<C-Down>",  ":resize -2<CR>", opts)
 map("n", "<C-Left>",  ":vertical resize -2<CR>", opts)
 map("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
--- Short Write/Close
-map("n", "<leader>w", ":w<CR>", opts)
-map("n", "<leader>q", ":q<CR>", opts)
-
 map("n", "0", "^", opts)
 map("n", "^", "0", opts)
 
